@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <DigitalPianism_TestFramework>
+            <version>0.0.1</version>
+        </DigitalPianism_TestFramework>
+    </modules>
+
+    <global>
+
+        <models>
+            <!-- Declare module models -->
+            <testframework>
+                <class>DigitalPianism_TestFramework_Model</class>
+            </testframework>
+        </models>
+
+        <helpers>
+            <!-- Declare module helper -->
+            <testframework>
+                <class>DigitalPianism_TestFramework_Helper</class>
+            </testframework>
+        </helpers>
+
+    </global>
+
+</config>
