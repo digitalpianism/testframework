@@ -1,6 +1,6 @@
 <?php
 
-class DigitalPianism_TestFramework_Helper_ControllerTestHelper {
+class DigitalPianism_TestFramework_Controller_TestHelper {
 
     /**
      * @param string $module
