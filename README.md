@@ -7,7 +7,7 @@ A simple test framework module that can be used to create unit and integration t
  - Create a `Test` folder under your module folder
  - Under this `Test` folder create the following files:
 
-`phpunit.xml.dist` with the following content:
+`phpunit.xml` with the following content:
 
     <?xml version="1.0"?>
     <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -19,7 +19,7 @@ A simple test framework module that can be used to create unit and integration t
     >
         <testsuites>
             <testsuite name="Magento Integration Tests">
-                <directory suffix="Test.php">.</directory>
+                <directory>.</directory>
             </testsuite>
         </testsuites>
 
@@ -31,32 +31,10 @@ Note that you can change most of the file here, the important part being the `bo
 
     <?php
 
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL | E_STRICT);
+    require __DIR__ . '../../../../lib/DigitalPianism/TestFramework/Helper/Magento.php';
+    DigitalPianism_TestFramework_Helper_Magento::bootstrap();
 
-    require __DIR__ . '/../../../../../../app/Mage.php';
-
-    function fix_error_handler()
-    {
-        $mageErrorHandler = set_error_handler(function () {
-            return false;
-        });
-        set_error_handler(function ($errno, $errstr, $errfile) use ($mageErrorHandler) {
-            if (substr($errfile, -19) === 'Varien/Autoload.php') {
-                return null;
-            }
-            return is_callable($mageErrorHandler) ?
-                call_user_func_array($mageErrorHandler, func_get_args()) :
-                false;
-        });
-    }
-    fix_error_handler();
-    Mage::app('', 'store', ['config_model'  =>  DigitalPianism_TestFramework_Model_Config::class]);
-    Mage::setIsDeveloperMode(true);
-    fix_error_handler();
-    $_SESSION = [];
-
-Please note that you may have to adapt the link to `app/Mage.php` depending on your Magento structure.
+Please note that you may have to adapt the link to `lib/DigitalPianism/TestFramework/Helper/Magento.php` depending on your Magento structure.
 
 ## Controller test sample
 
