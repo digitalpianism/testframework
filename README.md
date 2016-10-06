@@ -31,7 +31,7 @@ Note that you can change most of the file here, the important part being the `bo
 
     <?php
 
-    require __DIR__ . '../../../../lib/DigitalPianism/TestFramework/Helper/Magento.php';
+    require __DIR__ . '/../../../../../../lib/DigitalPianism/TestFramework/Helper/Magento.php';
     DigitalPianism_TestFramework_Helper_Magento::bootstrap();
 
 Please note that you may have to adapt the link to `lib/DigitalPianism/TestFramework/Helper/Magento.php` depending on your Magento structure.
