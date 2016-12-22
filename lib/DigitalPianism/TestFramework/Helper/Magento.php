@@ -2,7 +2,7 @@
 
 class DigitalPianism_TestFramework_Helper_Magento
 {
-    private function patchMagentoAutoloader()
+    private static function patchMagentoAutoloader()
     {
         $mageErrorHandler = set_error_handler(function () {
             return false;
