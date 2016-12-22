@@ -32,7 +32,7 @@ class DigitalPianism_TestFramework_Helper_Magento
      */
     public static function bootstrap()
     {
-        require __DIR__.'/../../../../app/Mage.php';
+        require_once __DIR__.'/../../../../app/Mage.php';
         self::patchMagentoAutoloader();
         self::init();
     }
