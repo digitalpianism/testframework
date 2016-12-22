@@ -1,8 +1,11 @@
 <?php
 
-class DigitalPianism_TestFramework_Controller_TestHelper {
+class DigitalPianism_TestFramework_Controller_TestHelper
+{
 
     /**
+     * Dispatch request
+     *
      * @param string $module
      * @param string $controller
      * @param string $action
@@ -19,6 +22,8 @@ class DigitalPianism_TestFramework_Controller_TestHelper {
     }
 
     /**
+     * Dispatch POST request
+     *
      * @param string $module
      * @param string $controller
      * @param string $action
@@ -30,6 +35,8 @@ class DigitalPianism_TestFramework_Controller_TestHelper {
     }
 
     /**
+     * Dispatch GET request
+     *
      * @param string $module
      * @param string $controller
      * @param string $action
