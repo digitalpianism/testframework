@@ -32,7 +32,7 @@ class DigitalPianism_TestFramework_Helper_Magento
      */
     public static function bootstrap($magentoPath = null)
     {
-        if($magentoPath === null) {
+        if ($magentoPath === null) {
             require_once __DIR__.'/../../../../app/Mage.php';
         } else {
             require_once $magentoPath;
