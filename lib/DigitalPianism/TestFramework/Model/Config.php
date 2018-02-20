@@ -13,6 +13,20 @@ class DigitalPianism_TestFramework_Model_Config extends Mage_Core_Model_Config
     private $resourceModelTestDoubles = [];
 
     /**
+     * Set test double for helper class.
+     *
+     * @param $helperClass
+     * @param $testDouble
+     */
+    public function setHelperTestDouble($helperClass, $testDouble)
+    {
+        $registryKey = '_helper/' . $helperClass;
+        
+        Mage::unregister($registryKey);
+        Mage::register($registryKey, $testDouble, true);
+    }
+
+    /**
      * Set $modelTestDouble variable
      *
      * @param $modelClass
