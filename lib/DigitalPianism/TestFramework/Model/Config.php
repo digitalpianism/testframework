@@ -15,8 +15,8 @@ class DigitalPianism_TestFramework_Model_Config extends Mage_Core_Model_Config
     /**
      * Set test double for helper class.
      *
-     * @param $helperClass
-     * @param $testDouble
+     * @param string $helperClass
+     * @param mixed $testDouble
      */
     public function setHelperTestDouble($helperClass, $testDouble)
     {
@@ -29,8 +29,8 @@ class DigitalPianism_TestFramework_Model_Config extends Mage_Core_Model_Config
     /**
      * Set $modelTestDouble variable
      *
-     * @param $modelClass
-     * @param $testDouble
+     * @param string $modelClass
+     * @param mixed $testDouble
      */
     public function setModelTestDouble($modelClass, $testDouble)
     {
@@ -57,8 +57,8 @@ class DigitalPianism_TestFramework_Model_Config extends Mage_Core_Model_Config
     /**
      * Set $resourceModelTestDouble variable
      *
-     * @param $modelClass
-     * @param $testDouble
+     * @param string $modelClass
+     * @param mixed $testDouble
      */
     public function setResourceModelTestDouble($modelClass, $testDouble)
     {
