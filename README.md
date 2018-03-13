@@ -85,8 +85,9 @@ As you may have noticed, the `bootstrap.php` injects a custom instance of the co
 
 This class declares several new methods:
 
- - `setModelTestDouble` and `getModelTestDouble` for model test doubles
- - `setResourceModelTestDouble` and `getResourceModelTestDouble` for resource model test doubles.
+ - `setModelTestDouble` for model test doubles
+ - `setResourceModelTestDouble` for resource model test doubles
+ - `setHelperTestDouble` for helper test doubles
 
 To use test doubles you can do the following in your `setUp` method.
 
